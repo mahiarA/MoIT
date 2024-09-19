@@ -16,7 +16,6 @@ body {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    position: relative; /* Position relative for moving dot */
 }
 
 /* Styling for the timer display */
@@ -57,37 +56,8 @@ button:hover {
     font-size: 3rem;
     margin: 20px;
     color: #f00;
-    display: none; /* Initially hidden */
-}
-
-/* Hide the moving dot initially */
-.moving-dot.hidden {
+    animation: flashShake 1s infinite;
     display: none;
-}
-
-/* Show the moving dot */
-.moving-dot.visible {
-    display: block;
-}
-
-/* Styling for the moving dot */
-.moving-dot {
-    position: absolute;
-    width: 20px; /* Dot size */
-    height: 20px; /* Dot size */
-    background-color: #f00;
-    border-radius: 50%;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Shadow size and intensity */
-    animation: moveAround 5s linear infinite;
-}
-
-/* Keyframes for moving dot */
-@keyframes moveAround {
-    0% { top: 10px; left: 10px; }
-    25% { top: 10px; right: 10px; }
-    50% { bottom: 10px; right: 10px; }
-    75% { bottom: 10px; left: 10px; }
-    100% { top: 10px; left: 10px; }
 }
 
 /* Keyframes for flashing and shaking effect */
@@ -104,7 +74,21 @@ button:hover {
     display: none;
 }
 
-/* Style for red text */
-.gray {
-    color: gray;
+/* Styling for the hourglass icon */
+#hourglass {
+    font-size: 3rem;
+    margin: 20px;
+    animation: rotateHourglass 2s infinite;
+}
+
+/* Keyframes for rotating the hourglass */
+@keyframes rotateHourglass {
+    0% { transform: rotate(0deg); }
+    50% { transform: rotate(180deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Styling for "Time's Up!" message */
+#timer h2 {
+    color: red;
 }
