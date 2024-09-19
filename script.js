@@ -29,7 +29,7 @@ function startTimer() {
         // Check if the countdown has expired
         if (distance < 0) {
             clearInterval(interval); // Stop the interval
-            document.getElementById('timer').innerHTML = "<h2>Time's Up!</h2>";
+             document.getElementById('timer').innerHTML = "<h2 style='color: red;'>Time's Up!</h2>"; // Change the text color to red
             document.getElementById('bell').style.display = 'block'; // Show the bell icon
 
             // Keep the button disabled after countdown expiration
