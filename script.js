@@ -2,8 +2,9 @@ let interval; // Variable to store the interval ID
 
 // Function to start the countdown timer
 function startTimer() {
+    const startButton = document.getElementById('startButton');
     const dateInput = document.getElementById('date-input').value;
-    
+
     // Check if the date input is empty
     if (!dateInput) {
         alert('Please set a target date.');
@@ -17,6 +18,9 @@ function startTimer() {
         clearInterval(interval);
     }
 
+    // Disable and gray out the start button
+    startButton.disabled = true;
+
     // Update the timer every second
     interval = setInterval(function() {
         const now = new Date().getTime();
@@ -27,6 +31,9 @@ function startTimer() {
             clearInterval(interval); // Stop the interval
             document.getElementById('timer').innerHTML = "<h2>Time's Up!</h2>";
             document.getElementById('bell').style.display = 'block'; // Show the bell icon
+
+            // Keep the button disabled after countdown expiration
+            startButton.disabled = true;
             return;
         }
 
@@ -46,6 +53,8 @@ function startTimer() {
 
 // Function to reset the countdown timer
 function resetTimer() {
+    const startButton = document.getElementById('startButton');
+
     // Clear the interval
     if (interval) {
         clearInterval(interval);
@@ -62,4 +71,7 @@ function resetTimer() {
     // Hide the bell icon and clear the input field
     document.getElementById('bell').style.display = 'none';
     document.getElementById('date-input').value = '';
+
+    // Re-enable and restore the start button
+    startButton.disabled = false;
 }
