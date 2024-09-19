@@ -17,9 +17,9 @@ function startTimer() {
         clearInterval(interval);
     }
 
-    // Show the hourglass when the timer starts
-    document.getElementById('hourglass').style.display = 'inline-block';
-    document.getElementById('startButton').disabled = true; // Disable the start button
+    // Show the moving dot and start its animation
+    document.querySelector('.moving-dot').classList.remove('hidden');
+    document.querySelector('.moving-dot').classList.add('visible');
 
     // Update the timer every second
     interval = setInterval(function() {
@@ -29,10 +29,9 @@ function startTimer() {
         // Check if the countdown has expired
         if (distance < 0) {
             clearInterval(interval); // Stop the interval
-            document.getElementById('timer').innerHTML = "<h2 style='color: red;'>Time's Up!</h2>";
+            document.getElementById('timer').innerHTML = "<h2 class='red'>Time's Up!</h2>";
             document.getElementById('bell').style.display = 'block'; // Show the bell icon
-            document.getElementById('hourglass').style.display = 'none'; // Hide the hourglass
-            document.getElementById('startButton').disabled = false; // Enable the start button again
+            document.querySelector('.moving-dot').classList.add('hidden'); // Hide the moving dot
             return;
         }
 
@@ -65,9 +64,8 @@ function resetTimer() {
         <div id="seconds" class="time-unit">--s</div>
     `;
 
-    // Hide the bell icon, hourglass, and reset the input field
+    // Hide the bell icon and clear the input field
     document.getElementById('bell').style.display = 'none';
-    document.getElementById('hourglass').style.display = 'none';
+    document.querySelector('.moving-dot').classList.add('hidden'); // Hide the moving dot
     document.getElementById('date-input').value = '';
-    document.getElementById('startButton').disabled = false; // Enable the start button again
 }
