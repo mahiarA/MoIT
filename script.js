@@ -2,9 +2,8 @@ let interval; // Variable to store the interval ID
 
 // Function to start the countdown timer
 function startTimer() {
-    const startButton = document.getElementById('startButton');
     const dateInput = document.getElementById('date-input').value;
-
+    
     // Check if the date input is empty
     if (!dateInput) {
         alert('Please set a target date.');
@@ -18,8 +17,9 @@ function startTimer() {
         clearInterval(interval);
     }
 
-    // Disable and gray out the start button
-    startButton.disabled = true;
+    // Show the hourglass when the timer starts
+    document.getElementById('hourglass').style.display = 'inline-block';
+    document.getElementById('startButton').disabled = true; // Disable the start button
 
     // Update the timer every second
     interval = setInterval(function() {
@@ -29,11 +29,10 @@ function startTimer() {
         // Check if the countdown has expired
         if (distance < 0) {
             clearInterval(interval); // Stop the interval
-            document.getElementById('timer').innerHTML = "<h2 style='color: red;'>Time's Up!</h2>"; // Change the text color to red
+            document.getElementById('timer').innerHTML = "<h2 style='color: red;'>Time's Up!</h2>";
             document.getElementById('bell').style.display = 'block'; // Show the bell icon
-
-            // Keep the button disabled after countdown expiration
-            startButton.disabled = true;
+            document.getElementById('hourglass').style.display = 'none'; // Hide the hourglass
+            document.getElementById('startButton').disabled = false; // Enable the start button again
             return;
         }
 
@@ -53,8 +52,6 @@ function startTimer() {
 
 // Function to reset the countdown timer
 function resetTimer() {
-    const startButton = document.getElementById('startButton');
-
     // Clear the interval
     if (interval) {
         clearInterval(interval);
@@ -68,10 +65,9 @@ function resetTimer() {
         <div id="seconds" class="time-unit">--s</div>
     `;
 
-    // Hide the bell icon and clear the input field
+    // Hide the bell icon, hourglass, and reset the input field
     document.getElementById('bell').style.display = 'none';
+    document.getElementById('hourglass').style.display = 'none';
     document.getElementById('date-input').value = '';
-
-    // Re-enable and restore the start button
-    startButton.disabled = false;
+    document.getElementById('startButton').disabled = false; // Enable the start button again
 }
