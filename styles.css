@@ -56,8 +56,8 @@ button:hover {
     font-size: 3rem;
     margin: 20px;
     color: #f00;
-    animation: flashShake 1s infinite; /* Apply the flash and shake animation */
-    display: none; /* Initially hidden */
+    animation: flashShake 1s infinite;
+    display: none;
 }
 
 /* Keyframes for flashing and shaking effect */
@@ -74,27 +74,21 @@ button:hover {
     display: none;
 }
 
-/* Graying out the disabled button */
-button:disabled {
-    background-color: #ccc;
-    cursor: not-allowed;
-    color: #666;
-}
 /* Styling for the hourglass icon */
 #hourglass {
-    font-size: 2rem;
-    margin-left: 10px;
-    animation: rotate 1s linear infinite;
-    display: none; /* Initially hidden */
+    font-size: 3rem;
+    margin: 20px;
+    animation: rotateHourglass 2s infinite;
 }
 
-/* Keyframes for rotating animation */
-@keyframes rotate {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+/* Keyframes for rotating the hourglass */
+@keyframes rotateHourglass {
+    0% { transform: rotate(0deg); }
+    50% { transform: rotate(180deg); }
+    100% { transform: rotate(360deg); }
 }
 
+/* Styling for "Time's Up!" message */
+#timer h2 {
+    color: red;
+}
