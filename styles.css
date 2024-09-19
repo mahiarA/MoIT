@@ -73,3 +73,10 @@ button:hover {
 .hidden {
     display: none;
 }
+
+/* Graying out the disabled button */
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+    color: #666;
+}
