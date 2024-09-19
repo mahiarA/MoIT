@@ -80,3 +80,21 @@ button:disabled {
     cursor: not-allowed;
     color: #666;
 }
+/* Styling for the hourglass icon */
+#hourglass {
+    font-size: 2rem;
+    margin-left: 10px;
+    animation: rotate 1s linear infinite;
+    display: none; /* Initially hidden */
+}
+
+/* Keyframes for rotating animation */
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
