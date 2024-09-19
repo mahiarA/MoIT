@@ -7,138 +7,30 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
-    <style>
-        /* Normal button style */
-        button {
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            cursor: pointer;
-            font-size: 16px;
-        }
-
-        /* Disabled button style */
-        button:disabled {
-            background-color: gray;
-            cursor: not-allowed;
-        }
-
-        .hidden {
-            display: none;
-        }
-
-        .visible {
-            display: block;
-            animation: shake 0.5s infinite;
-        }
-
-        /* Simple shaking animation */
-        @keyframes shake {
-            0% { transform: translateX(0); }
-            25% { transform: translateX(-5px); }
-            50% { transform: translateX(5px); }
-            75% { transform: translateX(-5px); }
-            100% { transform: translateX(0); }
-        }
-    </style>
 </head>
 <body>
     <div class="container">
         <h1>Countdown Timer</h1>
+        
         <!-- Timer display area -->
         <div id="timer">
-            <div id="days" class="time-unit"></div>
-            <div id="hours" class="time-unit"></div>
-            <div id="minutes" class="time-unit"></div>
-            <div id="seconds" class="time-unit"></div>
+            <div id="days" class="time-unit">--d</div>
+            <div id="hours" class="time-unit">--h</div>
+            <div id="minutes" class="time-unit">--m</div>
+            <div id="seconds" class="time-unit">--s</div>
         </div>
-
+        
         <!-- Input for setting target date and buttons to start/reset the countdown -->
         <div>
             <label for="date-input">Set Target Date:</label>
             <input type="datetime-local" id="date-input">
-            <button id="startButton" onclick="startTimer()">Start Countdown</button>
+            <button onclick="startTimer()" id="startButton">Start Countdown</button>
             <button onclick="resetTimer()">Reset Timer</button>
         </div>
-
-        <!-- Bell icon displayed when countdown ends -->
+        
+        <!-- Hourglass animation and bell icon displayed when countdown ends -->
+        <div id="hourglass" class="hidden">⏳</div>
         <div id="bell" class="hidden">🔔</div>
     </div>
-    <div>
-         <label for="date-input">Set Target Date:</label>
-         <input type="datetime-local" id="date-input">
-         <button id="startButton" onclick="startTimer()">Start Countdown</button>
-         <button onclick="resetTimer()">Reset Timer</button>
-    <!-- Hourglass icon -->
-    <span id="hourglass" class="hidden">⌛</span>
-    </div>
-
-    <script>
-        let timerInterval;
-
-        // Function to start the countdown
-        function startTimer() {
-            const startButton = document.getElementById('startButton');
-            const dateInput = document.getElementById('date-input').value;
-            const targetDate = new Date(dateInput).getTime();
-            const bell = document.getElementById('bell');
-
-            // Check if the date is valid
-            if (isNaN(targetDate)) {
-                alert("Please enter a valid date.");
-                return;
-            }
-
-            // Disable the Start button
-            startButton.disabled = true;
-
-            timerInterval = setInterval(function () {
-                const now = new Date().getTime();
-                const timeLeft = targetDate - now;
-
-                // Calculate time units
-                const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
-
-                // Display the result in the corresponding elements
-                document.getElementById("days").innerHTML = days + "d ";
-                document.getElementById("hours").innerHTML = hours + "h ";
-                document.getElementById("minutes").innerHTML = minutes + "m ";
-                document.getElementById("seconds").innerHTML = seconds + "s ";
-
-                // If countdown is finished
-                if (timeLeft < 0) {
-                    clearInterval(timerInterval);
-                    document.getElementById("days").innerHTML = "";
-                    document.getElementById("hours").innerHTML = "";
-                    document.getElementById("minutes").innerHTML = "";
-                    document.getElementById("seconds").innerHTML = "Expired";
-
-                    // Show the bell and make it shake
-                    bell.classList.remove("hidden");
-                    bell.classList.add("visible");
-                }
-            }, 1000);
-        }
-
-        // Function to reset the timer
-        function resetTimer() {
-            clearInterval(timerInterval);
-            document.getElementById("days").innerHTML = "";
-            document.getElementById("hours").innerHTML = "";
-            document.getElementById("minutes").innerHTML = "";
-            document.getElementById("seconds").innerHTML = "";
-
-            const bell = document.getElementById('bell');
-            bell.classList.remove("visible");
-            bell.classList.add("hidden");
-
-            // Enable the Start button again
-            document.getElementById("startButton").disabled = false;
-        }
-    </script>
 </body>
 </html>
