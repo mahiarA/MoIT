@@ -71,3 +71,15 @@ function resetTimer() {
     document.getElementById('date-input').value = '';
     document.getElementById('startButton').disabled = false; // Enable the start button again
 }
+function toggleTranslator() {
+    const countdownSection = document.getElementById("countdownSection");
+    const translatorSection = document.getElementById("translatorSection");
+
+    if (translatorSection.style.display === "none") {
+        countdownSection.style.display = "none";
+        translatorSection.style.display = "block";
+    } else {
+        countdownSection.style.display = "block";
+        translatorSection.style.display = "none";
+    }
+}
