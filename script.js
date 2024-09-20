@@ -83,3 +83,24 @@ function toggleTranslator() {
         translatorSection.style.display = "none";
     }
 }
+
+async function translateText() {
+    const text = document.getElementById("textToTranslate").value;
+    const sourceLang = document.getElementById("sourceLanguage").value;
+    const targetLang = document.getElementById("targetLanguage").value;
+
+    if (!text) {
+        alert("Please enter text to translate");
+        return;
+    }
+
+    try {
+        const response = await fetch(`https://api.mymemory.translated.net/get?q=${text}&langpair=${sourceLang}|${targetLang}`);
+        const data = await response.json();
+        const translatedText = data.responseData.translatedText;
+        document.getElementById("translatedText").innerText = translatedText;
+    } catch (error) {
+        console.error("Error fetching translation:", error);
+        alert("Translation failed. Please try again.");
+    }
+}
