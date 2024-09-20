@@ -111,3 +111,43 @@ button:hover {
 #translatorButton:hover {
     background-color: #45a049;
 }
+/* Translator container */
+.translator-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* Styling for the text areas */
+#textToTranslate, #translatedText {
+    width: 200px;
+    height: 150px;
+    margin: 10px;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Language selector container */
+.language-selector {
+    display: flex;
+    align-items: center;
+}
+
+/* Arrow between language dropdowns */
+.arrow {
+    margin: 0 10px;
+    font-size: 2rem;
+}
+
+/* Styling for the dropdowns */
+select {
+    padding: 10px;
+    margin: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
