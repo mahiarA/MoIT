@@ -31,6 +31,32 @@
         <!-- Hourglass animation and bell icon displayed when countdown ends -->
         <div id="hourglass" class="hidden">⏳</div>
         <div id="bell" class="hidden">🔔</div>
+        </div>
+
+<!-- Add a button to toggle the translator -->
+<button id="translatorButton" onclick="toggleTranslator()">Translator</button>
+
+<!-- Translator section (Initially hidden) -->
+<div id="translatorSection" style="display: none;">
+    <select id="sourceLanguage">
+        <option value="en">English</option>
+        <option value="es">Spanish</option>
+        <!-- Add more languages -->
+    </select>
+
+    <textarea id="textToTranslate" rows="5" cols="30" placeholder="Enter text"></textarea>
+
+    <select id="targetLanguage">
+        <option value="es">Spanish</option>
+        <option value="en">English</option>
+        <!-- Add more languages -->
+    </select>
+
+    <button onclick="translateText()">Translate</button>
+
+    <h2>Translated Text:</h2>
+    <div id="translatedText"></div>
+</div>
     </div>
 </body>
 </html>
