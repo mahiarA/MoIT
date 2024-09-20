@@ -92,3 +92,22 @@ button:hover {
 #timer h2 {
     color: red;
 }
+#translatorSection {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+}
+
+#translatorButton {
+    margin: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#translatorButton:hover {
+    background-color: #45a049;
+}
