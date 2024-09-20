@@ -38,25 +38,35 @@
 
 <!-- Translator section (Initially hidden) -->
 <div id="translatorSection" style="display: none;">
-    <select id="sourceLanguage">
-        <option value="en">English</option>
-        <option value="es">Spanish</option>
-        <!-- Add more languages -->
-    </select>
+    <div class="translator-container">
+        <!-- Source Text Area -->
+        <textarea id="textToTranslate" rows="5" cols="30" placeholder="Enter text"></textarea>
 
-    <textarea id="textToTranslate" rows="5" cols="30" placeholder="Enter text"></textarea>
+        <!-- Language Selector and Arrow -->
+        <div class="language-selector">
+            <select id="sourceLanguage">
+                <option value="en">English</option>
+                <option value="fa">Persian</option>
+                <!-- Add more languages as needed -->
+            </select>
 
-    <select id="targetLanguage">
-        <option value="es">Spanish</option>
-        <option value="en">English</option>
-        <!-- Add more languages -->
-    </select>
+            <!-- Arrow indicating direction -->
+            <span class="arrow">→</span>
+
+            <select id="targetLanguage">
+                <option value="fa">Persian</option>
+                <option value="en">English</option>
+                <!-- Add more languages as needed -->
+            </select>
+        </div>
+
+        <!-- Translated Text Area -->
+        <textarea id="translatedText" rows="5" cols="30" placeholder="Translation will appear here" readonly></textarea>
+    </div>
 
     <button onclick="translateText()">Translate</button>
-
-    <h2>Translated Text:</h2>
-    <div id="translatedText"></div>
 </div>
+
     </div>
 </body>
 </html>
