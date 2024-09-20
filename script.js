@@ -97,10 +97,10 @@ async function translateText() {
     try {
         const response = await fetch(`https://api.mymemory.translated.net/get?q=${text}&langpair=${sourceLang}|${targetLang}`);
         const data = await response.json();
-        const translatedText = data.responseData.translatedText;
-        document.getElementById("translatedText").innerText = translatedText;
+        document.getElementById("translatedText").value = data.responseData.translatedText;
     } catch (error) {
         console.error("Error fetching translation:", error);
         alert("Translation failed. Please try again.");
     }
 }
+
