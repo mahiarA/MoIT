@@ -3,70 +3,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Countdown Timer</title>
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <title>moit - IT Consultation Services</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
 </head>
 <body>
-    <div class="container">
-        <h1>Countdown Timer</h1>
-        
-        <!-- Timer display area -->
-        <div id="timer">
-            <div id="days" class="time-unit">--d</div>
-            <div id="hours" class="time-unit">--h</div>
-            <div id="minutes" class="time-unit">--m</div>
-            <div id="seconds" class="time-unit">--s</div>
+    <header>
+        <div class="container">
+            <h1>moit</h1>
+            <nav>
+                <ul>
+                    <li><a href="#infrastructure">IT Infrastructure</a></li>
+                    <li><a href="#deployment">Deployment Appliance</a></li>
+                    <li><a href="#security">Cyber Security</a></li>
+                    <li><a href="#ticketing">Ticketing System</a></li>
+                    <li><a href="#mirroring">Screen Mirroring</a></li>
+                    <li><a href="#mdm">MDM Solutions</a></li>
+                </ul>
+            </nav>
         </div>
-        
-        <!-- Input for setting target date and buttons to start/reset the countdown -->
-        <div>
-            <label for="date-input">Set Target Date:</label>
-            <input type="datetime-local" id="date-input">
-            <button onclick="startTimer()" id="startButton">Start Countdown</button>
-            <button onclick="resetTimer()">Reset Timer</button>
+    </header>
+
+    <main>
+        <section id="infrastructure">
+            <div class="container">
+                <h2>IT Infrastructure (Cisco Meraki)</h2>
+                <p>We offer cutting-edge infrastructure solutions using Cisco Meraki, providing secure, scalable, and simplified IT management for businesses.</p>
+                <div class="comment-section">
+                    <h3>Leave a comment</h3>
+                    <form>
+                        <textarea placeholder="Add your comment here..." required></textarea>
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section id="deployment">
+            <div class="container">
+                <h2>Deployment Appliance (KACE)</h2>
+                <p>We use KACE Deployment Appliance for automated deployment and system management, streamlining IT operations across enterprises.</p>
+                <div class="comment-section">
+                    <h3>Leave a comment</h3>
+                    <form>
+                        <textarea placeholder="Add your comment here..." required></textarea>
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section id="security">
+            <div class="container">
+                <h2>Cyber Security (Palo Alto)</h2>
+                <p>Ensure your business is protected with the latest cybersecurity solutions, leveraging Palo Alto's industry-leading security technologies.</p>
+                <div class="comment-section">
+                    <h3>Leave a comment</h3>
+                    <form>
+                        <textarea placeholder="Add your comment here..." required></textarea>
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section id="ticketing">
+            <div class="container">
+                <h2>Ticketing System (KACE Quest)</h2>
+                <p>Efficiently manage your IT helpdesk with KACE Quest's powerful ticketing system, improving service response and management.</p>
+                <div class="comment-section">
+                    <h3>Leave a comment</h3>
+                    <form>
+                        <textarea placeholder="Add your comment here..." required></textarea>
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section id="mirroring">
+            <div class="container">
+                <h2>Screen Mirroring (Air Squirrel's Ditto)</h2>
+                <p>Seamlessly mirror devices with Air Squirrel’s Ditto, ideal for collaborative environments, meetings, and classrooms.</p>
+                <div class="comment-section">
+                    <h3>Leave a comment</h3>
+                    <form>
+                        <textarea placeholder="Add your comment here..." required></textarea>
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section id="mdm">
+            <div class="container">
+                <h2>MDM Solutions (Intune, JAMF, Meraki, KACE)</h2>
+                <p>We offer enterprise-level mobile device management solutions using Microsoft Intune, JAMF, Meraki MDM, and KACE Cloud MDM.</p>
+                <div class="comment-section">
+                    <h3>Leave a comment</h3>
+                    <form>
+                        <textarea placeholder="Add your comment here..." required></textarea>
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 moit | IT Consultation Services</p>
         </div>
-        
-        <!-- Hourglass animation and bell icon displayed when countdown ends -->
-        <div id="hourglass" class="hidden">⏳</div>
-        <div id="bell" class="hidden">🔔</div>
-        </div>
+    </footer>
 
-<!-- Add a button to toggle the translator -->
-<button id="translatorButton" onclick="toggleTranslator()">Translator</button>
-
-<!-- Translator section (Initially hidden) -->
-<div id="translatorSection" style="display: none;">
-    <div class="translator-container">
-        <!-- Source Text Area -->
-        <textarea id="textToTranslate" rows="5" cols="30" placeholder="Enter text"></textarea>
-
-        <!-- Language Selector and Arrow -->
-        <div class="language-selector">
-            <select id="sourceLanguage">
-                <option value="en">English</option>
-                <option value="fa">Persian</option>
-                <!-- Add more languages as needed -->
-            </select>
-
-            <!-- Arrow indicating direction -->
-            <span class="arrow">→</span>
-
-            <select id="targetLanguage">
-                <option value="fa">Persian</option>
-                <option value="en">English</option>
-                <!-- Add more languages as needed -->
-            </select>
-        </div>
-
-        <!-- Translated Text Area -->
-        <textarea id="translatedText" rows="5" cols="30" placeholder="Translation will appear here" readonly></textarea>
-    </div>
-
-    <button onclick="translateText()">Translate</button>
-</div>
-
-    </div>
 </body>
 </html>
