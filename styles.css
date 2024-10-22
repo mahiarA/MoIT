@@ -1,153 +1,100 @@
-/* Basic styling for body */
-body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+* {
     margin: 0;
-    background-color: #f0f0f0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* Styling for the container */
-.container {
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
     text-align: center;
-    background: white;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.container {
+    width: 80%;
+    margin: 20px auto;
     padding: 20px;
+    background-color: white;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Styling for the timer display */
-#timer {
-    display: flex;
-    justify-content: center;
-    margin: 20px 0;
+h2 {
+    margin-bottom: 10px;
+    font-size: 2em;
+    color: #333;
 }
 
-/* Common styling for time units */
-.time-unit {
-    font-size: 2rem;
-    margin: 0 10px;
+p {
+    margin-bottom: 15px;
 }
 
-/* Specific styling for individual time units */
-#days, #hours, #minutes, #seconds {
+.comment-section {
+    margin-top: 20px;
+}
+
+.comment-section h3 {
+    margin-bottom: 10px;
+}
+
+textarea {
+    width: 100%;
+    height: 100px;
     padding: 10px;
-    border: 1px solid #ccc;
+    margin-bottom: 10px;
     border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 1em;
 }
 
-/* Styling for buttons */
 button {
     padding: 10px 20px;
-    margin: 10px;
-    font-size: 1rem;
-    cursor: pointer;
-}
-
-/* Styling for button hover effect */
-button:hover {
-    background-color: #ddd;
-}
-
-/* Styling for the bell icon */
-#bell {
-    font-size: 3rem;
-    margin: 20px;
-    color: #f00;
-    animation: flashShake 1s infinite;
-    display: none;
-}
-
-/* Keyframes for flashing and shaking effect */
-@keyframes flashShake {
-    0% { opacity: 1; transform: translateX(0); }
-    25% { opacity: 0.5; transform: translateX(-10px); }
-    50% { opacity: 1; transform: translateX(0); }
-    75% { opacity: 0.5; transform: translateX(10px); }
-    100% { opacity: 1; transform: translateX(0); }
-}
-
-/* Class to hide elements */
-.hidden {
-    display: none;
-}
-
-/* Styling for the hourglass icon */
-#hourglass {
-    font-size: 3rem;
-    margin: 20px;
-    animation: rotateHourglass 2s infinite;
-}
-
-/* Keyframes for rotating the hourglass */
-@keyframes rotateHourglass {
-    0% { transform: rotate(0deg); }
-    50% { transform: rotate(180deg); }
-    100% { transform: rotate(360deg); }
-}
-
-/* Styling for "Time's Up!" message */
-#timer h2 {
-    color: red;
-}
-#translatorSection {
-    margin-top: 20px;
-    padding: 20px;
-    background-color: #f0f0f0;
-    border-radius: 5px;
-}
-
-#translatorButton {
-    margin: 20px;
-    padding: 10px 20px;
-    background-color: #4CAF50;
+    background-color: #333;
     color: white;
     border: none;
+    border-radius: 4px;
     cursor: pointer;
 }
 
-#translatorButton:hover {
-    background-color: #45a049;
-}
-/* Translator container */
-.translator-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
+button:hover {
+    background-color: #555;
 }
 
-/* Styling for the text areas */
-#textToTranslate, #translatedText {
-    width: 200px;
-    height: 150px;
-    margin: 10px;
-    padding: 10px;
-    font-size: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
 }
 
-/* Language selector container */
-.language-selector {
-    display: flex;
-    align-items: center;
+footer p {
+    margin: 0;
 }
-
-/* Arrow between language dropdowns */
-.arrow {
-    margin: 0 10px;
-    font-size: 2rem;
-}
-
-/* Styling for the dropdowns */
-select {
-    padding: 10px;
-    margin: 10px;
-    font-size: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
