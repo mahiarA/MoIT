@@ -98,6 +98,7 @@ p {
     margin: 20px auto;
 }
 
+/* Footer */
 footer {
     background-color: #002366;
     color: white;
@@ -107,6 +108,31 @@ footer {
 
 footer p {
     margin: 0;
+}
+
+/* Background and Theme Colors for Each Page */
+body.infrastructure {
+    background-color: rgba(173, 216, 230, 0.3); /* Light dissolved blue for IT Infrastructure */
+}
+
+body.deployment {
+    background-color: rgba(144, 238, 144, 0.3); /* Light dissolved green for Deployment Appliance */
+}
+
+body.cyber-security {
+    background-color: rgba(240, 128, 128, 0.3); /* Light dissolved red for Cyber Security */
+}
+
+body.ticketing {
+    background-color: rgba(255, 255, 224, 0.3); /* Light dissolved yellow for Ticketing System */
+}
+
+body.screen-mirroring {
+    background-color: rgba(221, 160, 221, 0.3); /* Light dissolved purple for Screen Mirroring */
+}
+
+body.mdm {
+    background-color: rgba(255, 165, 0, 0.3); /* Light dissolved orange for MDM Solutions */
 }
 
 /* Responsive Design: Media Queries */
