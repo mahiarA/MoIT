@@ -6,14 +6,15 @@
 }
 
 html {
-    scroll-behavior: smooth; /* Adds smooth scrolling behavior */
+    scroll-behavior: smooth;
 }
 
 body {
     font-family: 'Helvetica Neue', sans-serif;
     line-height: 1.6;
     color: #333;
-    min-height: 100vh; /* Ensure body takes full height */
+    min-height: 100vh;
+    background-color: #f0f0f0;
 }
 
 /* Header Styles */
@@ -21,12 +22,12 @@ header {
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 1000;  /* Ensure header stays on top */
-    background-color: #002366;  
+    z-index: 1000;
+    background-color: #002366;
     color: white;
     padding: 20px 0;
     text-align: center;
-    border-bottom: 5px solid #FFD700;  
+    border-bottom: 5px solid #FFD700;
 }
 
 header .brand {
@@ -43,52 +44,42 @@ header .logo {
 nav ul {
     list-style: none;
     padding: 10px 0;
+    display: flex;
+    justify-content: center;
 }
 
 nav ul li {
-    display: inline-block;
     margin: 0 15px;
 }
 
 nav ul li a {
-    color: white;  /* Ensure visibility */
+    color: white;
     text-decoration: none;
     font-size: 1.2em;
     transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-    color: #FFD700;  
-}
-
-/* Fix Opacity for Navigation */
-header, nav ul li a {
-    opacity: 1; /* Ensure header and links are fully visible */
+    color: #FFD700;
 }
 
 /* Section Styling */
 section {
-    margin-top: 120px;  /* Ensure content starts after the fixed header */
-    margin-bottom: 50px; 
-    clear: both;
-    display: block; 
-}
-
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 40px auto;
+    margin-top: 150px; /* Space for fixed header */
     padding: 20px;
-    background-color: rgba(255, 255, 255, 0.9); /* Light dissolved background */
+    background-color: white;
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    min-height: 500px; /* Ensure the container has enough height */
+    width: 90%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
 }
 
 h2 {
     font-size: 2.2em;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     color: #002366;
 }
 
@@ -110,41 +101,38 @@ footer {
     color: white;
     padding: 10px 0;
     text-align: center;
-    clear: both;
-    position: relative;
-    z-index: 1000;
 }
 
 footer p {
     margin: 0;
 }
 
-/* Background and Theme Colors for Each Page */
+/* Theme Colors for Each Page */
 body.infrastructure {
-    background-color: rgba(173, 216, 230, 0.3); /* Light dissolved blue for IT Infrastructure */
+    background-color: #e0f7fa; /* Light cyan for IT Infrastructure */
 }
 
 body.deployment {
-    background-color: rgba(144, 238, 144, 0.3); /* Light dissolved green for Deployment Appliance */
+    background-color: #e8f5e9; /* Light green for Deployment Appliance */
 }
 
 body.cyber-security {
-    background-color: rgba(240, 128, 128, 0.3); /* Light dissolved red for Cyber Security */
+    background-color: #ffebee; /* Light red for Cyber Security */
 }
 
 body.ticketing {
-    background-color: rgba(255, 255, 224, 0.3); /* Light dissolved yellow for Ticketing System */
+    background-color: #fffde7; /* Light yellow for Ticketing System */
 }
 
 body.screen-mirroring {
-    background-color: rgba(221, 160, 221, 0.3); /* Light dissolved purple for Screen Mirroring */
+    background-color: #f3e5f5; /* Light purple for Screen Mirroring */
 }
 
 body.mdm {
-    background-color: rgba(255, 165, 0, 0.3); /* Light dissolved orange for MDM Solutions */
+    background-color: #fff3e0; /* Light orange for MDM Solutions */
 }
 
-/* Responsive Design: Media Queries */
+/* Responsive Design */
 
 /* For mobile devices (up to 600px wide) */
 @media screen and (max-width: 600px) {
@@ -152,27 +140,17 @@ body.mdm {
         font-size: 2.5em;
     }
     
+    nav ul {
+        flex-direction: column;
+        padding: 0;
+    }
+
     nav ul li {
-        display: block;
         margin: 10px 0;
     }
     
     nav ul li a {
-        font-size: 1.5em; 
-    }
-    
-    .container {
-        width: 95%; 
-        padding: 15px;
-    }
-
-    h2 {
-        font-size: 1.8em;
-    }
-
-    button {
-        padding: 12px 20px; 
-        font-size: 1em;
+        font-size: 1.5em;
     }
 }
 
@@ -182,37 +160,21 @@ body.mdm {
         font-size: 2.5em;
     }
 
+    nav ul {
+        flex-direction: row;
+        padding: 0;
+    }
+
     nav ul li {
-        display: block;
-        text-align: center;
-        margin: 5px 0;
+        margin: 5px 10px;
     }
 
     nav ul li a {
         font-size: 1.3em;
     }
 
-    .container {
+    section {
         width: 95%;
         padding: 20px;
-    }
-
-    h2 {
-        font-size: 2em;
-    }
-}
-
-/* For larger screens (1200px and above) */
-@media screen and (min-width: 1200px) {
-    .container {
-        max-width: 1200px; 
-    }
-
-    header .brand {
-        font-size: 3.5em;
-    }
-
-    h2 {
-        font-size: 2.4em;
     }
 }
