@@ -178,3 +178,10 @@ body.mdm {
         padding: 20px;
     }
 }
+/* styles.css */
+.page-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
