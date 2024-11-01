@@ -3,7 +3,7 @@ const navLinks = document.querySelectorAll('nav ul li a');
 
 // Function to add the hover effect
 function addHoverEffect(event) {
-    event.target.style.transform = 'scale(1.1)'; // Zoom in
+    event.target.style.transform = 'scale(1.5)'; // Zoom in
     event.target.style.boxShadow = '0px 4px 10px rgba(0, 0, 0, 0.2)'; // Add shadow
 }
 
