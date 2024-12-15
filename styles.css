@@ -93,7 +93,7 @@ nav {
 
 /* Hero Section */
 .hero {
-    background: url('banner.jpg') no-repeat center center/cover;
+    background: url('images/banner.jpg') no-repeat center center/cover;
     position: relative;
     height: 50vh;
     display: flex;
