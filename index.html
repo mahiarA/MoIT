@@ -1,62 +1,81 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mo IT - IT Consultation Services</title>
+    <title>Mo IT - IT Consulting Services</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <header>
     <div class="container">
-        <a href="index.html">
-            <img src="logo.png" alt="Mo IT Logo" class="logo">
-        </a>
-        <h1 class="brand">Mo IT</h1>
+        <div class="logo">
+            <h1>Mo IT</h1>
+        </div>
         <nav>
-            <ul>
-                <li><a href="infrastructure.html">IT Infrastructure</a></li>
-                <li><a href="deployment.html">Deployment Appliance</a></li>
-                <li><a href="cyber-security.html">Cyber Security</a></li>
-                <li><a href="ticketing.html">Ticketing System</a></li>
-                <li><a href="screen-mirroring.html">Screen Mirroring</a></li>
-                <li><a href="mdm.html">MDM Solutions</a></li>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#">What We Do &#x25BC;</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="infrastructure.html">IT Infrastructure</a></li>
+                        <li><a href="deployment.html">Deployment Appliance</a></li>
+                        <li><a href="cyber-security.html">Cyber Security</a></li>
+                        <li><a href="ticketing.html">Ticketing System</a></li>
+                        <li><a href="screen-mirroring.html">Screen Mirroring</a></li>
+                        <li><a href="mdm.html">MDM Solutions</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Resources</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
             </ul>
+            <div class="hamburger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </nav>
     </div>
 </header>
 
-
 <main>
-    <section>
-        <div class="container">
-            <h2>Welcome to Mo IT - Your Trusted IT Consultation Partner</h2>
-            <p>At Mo IT, we offer a range of IT consulting services designed to enhance your organization's technology infrastructure and security. Our experienced team specializes in solutions across IT infrastructure, system deployment, cybersecurity, and more.</p>
-            <p>Explore our services and see how we can help your business grow by leveraging the latest in technology and security practices.</p>
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Welcome to Mo IT</h2>
+            <p>Your Trusted Partner for IT Consulting Services</p>
+            <a href="#" class="cta-button">Learn More</a>
         </div>
     </section>
 
-    <section>
-        <div class="container">
-            <h2>Our Key Services</h2>
-            <ul>
-                <li><a href="infrastructure.html">IT Infrastructure (Cisco Meraki)</a></li>
-                <li><a href="deployment.html">Deployment Appliance (KACE)</a></li>
-                <li><a href="cyber-security.html">Cyber Security (Palo Alto)</a></li>
-                <li><a href="ticketing.html">Ticketing System (KACE Quest)</a></li>
-                <li><a href="screen-mirroring.html">Screen Mirroring (Ditto by Air Squirrels)</a></li>
-                <li><a href="mdm.html">MDM Solutions (Intune, JAMF, Meraki, KACE)</a></li>
-            </ul>
+    <section class="services">
+        <h2>Our Services</h2>
+        <div class="service-list">
+            <div class="service-item">
+                <h3>IT Infrastructure</h3>
+                <p>Building and managing scalable network solutions.</p>
+                <a href="infrastructure.html" class="service-link">Learn More</a>
+            </div>
+            <div class="service-item">
+                <h3>Cyber Security</h3>
+                <p>Protecting your business from digital threats.</p>
+                <a href="cyber-security.html" class="service-link">Learn More</a>
+            </div>
         </div>
+    </section>
+
+    <section class="contact">
+        <h2>Contact Us</h2>
+        <p>Have questions? Call us at <strong>818-571-4301</strong> or visit our <a href="contact.html">Contact Page</a>.</p>
     </section>
 </main>
 
 <footer>
-    <div class="container">
-        <p>&copy; 2024 Mo IT | IT Consultation Services</p>
-    </div>
+    <p>&copy; 2024 Mo IT | IT Consultation Services</p>
 </footer>
+
 <script src="script.js"></script>
 </body>
 </html>
