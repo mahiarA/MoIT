@@ -1,34 +1,46 @@
-
+/* Reset margin, padding, and set a global font and color */
 body, html {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
     color: white;
 }
+
+/* Header section: Set background color, padding, and flex alignment */
 header {
-    background-color: rgba(0, 0, 0, 0.8);
-    color: #FFD700;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black */
+    color: #FFD700; /* Golden yellow for text */
     padding: 10px 20px;
     display: flex;
     align-items: center;
 }
+
+/* Navigation: Add left margin for spacing */
 header nav {
     margin-left: 20px;
 }
+
+/* Navigation links: White text with no underline */
 header nav a {
     color: white;
     text-decoration: none;
-    margin: 0 15px;
+    margin: 0 15px; /* Add spacing between links */
 }
+
+/* Navigation links hover: Underline effect on hover */
 header nav a:hover {
     text-decoration: underline;
 }
+
+/* Main container: Full viewport height with background properties */
 .container {
     position: relative;
     height: 100vh;
     background-size: cover;
     background-position: center;
 }
+
+/* Overlay section: Semi-transparent block positioned at the top-left */
 .overlay {
     background-color: rgba(0, 0, 0, 0.8);
     position: absolute;
@@ -36,8 +48,10 @@ header nav a:hover {
     left: 5%;
     width: 40%;
     padding: 20px;
-    border-radius: 5px;
+    border-radius: 5px; /* Rounded corners */
 }
+
+/* Right section: Semi-transparent block positioned at the top-right */
 .right-section {
     position: absolute;
     top: 30%;
@@ -45,35 +59,43 @@ header nav a:hover {
     width: 30%;
     background-color: rgba(0, 0, 0, 0.8);
     padding: 20px;
-    border-radius: 5px;
+    border-radius: 5px; /* Rounded corners */
 }
+
+/* Middle section: Positioned lower with blue background */
 .middle-section {
     position: absolute;
     top: 70%;
     right: 30%;
     width: 30%;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent */
     padding: 10px;
     border-radius: 5px;
-	background-color: blue;
+    background-color: blue; /* Solid blue background */
 }
+
+/* Right-section headings: Yellow color for headings */
 .right-section h2 {
     color: yellow;
 }
+
+/* Contact button: Red background, white text, and hover cursor */
 button.contact {
     background-color: red;
     color: white;
     border: none;
     padding: 10px;
-    cursor: pointer;
+    cursor: pointer; /* Show pointer cursor on hover */
     margin-top: 10px;
 }
+
+/* Footer: Fixed at the bottom with text centered and small font size */
 footer {
     text-align: center;
     padding: 10px;
     font-size: 12px;
-    background-color: rgba(0, 0, 0, 0.8);
-    color: #ccc;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black */
+    color: #ccc; /* Light grey text */
     position: absolute;
     bottom: 0;
     width: 100%;
