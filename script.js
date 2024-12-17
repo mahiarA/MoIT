@@ -5,7 +5,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // Apply scaling effect with proper styles
     menuItems.forEach(item => {
         item.style.transition = "transform 0.3s ease, color 0.3s ease"; // Add smooth scaling and color transition
-
         item.addEventListener("mouseover", () => {
             item.style.transform = "scale(1.2)"; // Magnify the element
             item.style.color = "#007BFF"; // Optional: change color on hover
